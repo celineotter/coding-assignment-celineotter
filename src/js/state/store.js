@@ -1,22 +1,23 @@
 // @flow
 
-import { createStore, applyMiddleware } from 'redux';
-import reduxPromise from 'redux-promise';
-import reduxThunk from 'redux-thunk';
+import { createStore } from 'redux';
 
 import reducers from 'js/state/reducers';
 
 let store;
-const initialState = {
-  // auth: {
-  // },
-};
+
+const existingUserType = sessionStorage.getItem('userType');
+console.log('existing user type', existingUserType);
+const initialState = existingUserType ? {
+  auth: {
+    userType: existingUserType,
+  },
+} : {};
 
 export const initializeStore = (state?: Object = initialState) => {
   store = createStore(
     reducers,
     state,
-    applyMiddleware(reduxPromise, reduxThunk)
   );
   return store;
 };

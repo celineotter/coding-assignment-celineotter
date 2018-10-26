@@ -23,30 +23,31 @@ class TrafficLight extends Component {
   }
 
   handleLightChange = () => {
+    const tempIndex = this.state.colorIndex + 1;
+    const newIndex = tempIndex > this.state.colors.length - 1 ? 0 : tempIndex;
     cancelTimeOut = setTimeout(() => {
-      this.setState((prevState) => {
-        const tempIndex = prevState.colorIndex + 1;
-        const newIndex = tempIndex > prevState.colors.length - 1 ? 0 : tempIndex;
-
-        return { colorIndex: newIndex };
-      }, this.handleLightChange);
+      this.setState({ colorIndex: newIndex }, this.handleLightChange);
     }, 1000);
   }
 
   render() {
     return (
-      <div styleName="traffic-light-container">
-        <div styleName="square">
-          {this.state.colors.map((color, index) => {
-            const activeLight = index === this.state.colorIndex;
-            const colorStyle = activeLight ? color : '';
-            const style = `circle circle${index} ${colorStyle}`;
-            return (
-              <div styleName={style} key={`light${index}`} />
-            );
-          })}
+      <div>
+        <div styleName="traffic-light-container">
+          <div styleName="square">
+            {this.state.colors.map((color, index) => {
+              const activeLight = index === this.state.colorIndex;
+              const colorStyle = activeLight ? color : '';
+              const style = `circle circle${index} ${colorStyle}`;
+
+              return (
+                <div styleName={style} key={`light${index}`} />
+              );
+            })}
+          </div>
         </div>
       </div>
+
     );
   }
 }

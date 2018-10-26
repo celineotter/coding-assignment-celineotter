@@ -17,7 +17,8 @@ exports[`renders landing text 1`] = `
     className="src-js-components-screens-Landing-___styles__intro___2mDAK"
     testid="intro"
   >
-    My react app!
+    Traffic Light Exercise!
   </p>
+  <TrafficLight />
 </div>
 `;
