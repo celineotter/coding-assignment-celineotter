@@ -7,7 +7,7 @@ import reducers from 'js/state/reducers';
 let store;
 
 const existingUserType = sessionStorage.getItem('userType');
-console.log('existing user type', existingUserType);
+
 const initialState = existingUserType ? {
   auth: {
     userType: existingUserType,

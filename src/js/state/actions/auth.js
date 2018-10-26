@@ -1,7 +1,6 @@
 export const actionTypes = { SET_USER_TYPE: 'SET_USER_TYPE', CLEAR_USER_TYPE: 'CLEAR_USER_TYPE' };
 
 export const setUserType = (userType) => {
-
   sessionStorage.setItem('userType', userType);
   return {
     type: actionTypes.SET_USER_TYPE,
