@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+import TrafficLight from '@common/TrafficLight';
 import './styles.css';
 
 const Landing = () => {
@@ -13,6 +14,8 @@ const Landing = () => {
       <p styleName="intro" testid="intro">
         My react app!
       </p>
+
+      <TrafficLight />
     </div>
   );
 };

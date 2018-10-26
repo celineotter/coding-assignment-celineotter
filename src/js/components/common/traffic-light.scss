@@ -1,0 +1,44 @@
+.traffic-light-container {
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+    width:200px;
+    height:200px;
+    border-radius:100px;
+    background-color:black;
+    position:absolute;
+}
+
+.circle0 {
+    top:0;
+}
+
+.circle1 {
+    top:30%;
+}
+
+.circle2 {
+    top:60%;
+}
+
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+
+.square {
+    width:205px;
+    height:700px;
+    background-color:white;
+    position:absolute;
+    border-style:solid;
+    border-color:black;
+    z-index:1;
+}
