@@ -1,0 +1,23 @@
+[ignore]
+.*\.scss
+.*\.css
+.*\.test.js
+
+[include]
+
+[libs]
+flow/
+src/types/
+
+[lints]
+
+[options]
+module.name_mapper='.*\(.s?css\)' -> 'empty/object'
+module.name_mapper='^src/\(.*\)' -> '<PROJECT_ROOT>/src/\1'
+module.name_mapper='^\(.*\)' -> '<PROJECT_ROOT>/src/\1'
+module.name_mapper='^@screens\/\(.*\)$' -> '<PROJECT_ROOT>/src/js/components/screens/\1'
+module.name_mapper='^@common\/\(.*\)$' -> '<PROJECT_ROOT>/src/js/components/common/\1'
+module.name_mapper='^@assets\/\(.*\)$' -> '<PROJECT_ROOT>/src/assets/\1'
+module.name_mapper='^@styles\/\(.*\)$' -> 'empty/q'
+
+[strict]

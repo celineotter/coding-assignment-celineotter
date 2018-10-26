@@ -1,0 +1,30 @@
+{
+  "presets": [
+    "env",
+    "react-app"
+  ],
+  "plugins": [
+    [
+      "react-css-modules",
+      {
+        "exclude": "node_modules",
+        "filetypes": {
+          ".scss": {
+            "syntax": "postcss-scss"
+          }
+        }
+      }
+    ],
+    [
+      "module-resolver", {
+        "root": ["src"],
+        "alias": {
+          "@screens": "./src/js/components/screens",
+          "@common": "./src/js/components/common",
+          "@assets": "./src/assets",
+          "@styles": "./src/styles"
+        }
+      }
+    ]
+  ]
+}

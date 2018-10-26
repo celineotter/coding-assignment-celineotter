@@ -1,0 +1,7 @@
+coverage/
+node_modules/
+build/
+config/
+scripts/
+src/types/
+flow-typed

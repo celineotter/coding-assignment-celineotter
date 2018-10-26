@@ -1,0 +1,82 @@
+{
+  "env": {
+    "es6": true
+  },
+  "root": true,
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "standard-react",
+    "plugin:flowtype/recommended",
+    "plugin:jest/recommended"
+  ],
+  "plugins": [
+    "react",
+    "import",
+    "flowtype",
+    "jest"
+  ],
+  "globals": {
+    "describe": true,
+    "expect": true,
+    "fakeAction": true,
+    "jest": true,
+    "window": true,
+    "document": true,
+    "Response": true,
+    "fetch": true,
+    "Blob": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "no-console": "off",
+    "max-len": ["error", 120],
+    "react/no-array-index-key": "off",
+    "no-undef": "off",
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-param-reassign": "error",
+    "flowtype/semi": "error",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-quotes": ["error", "prefer-double"],
+    "jest/no-focused-tests": "error",
+    "class-methods-use-this": "off",
+    "comma-dangle": "off",
+    "arrow-body-style": "off",
+    "arrow-parens": "off",
+    "prefer-destructuring": "off",
+    "object-shorthand": "off",
+    "function-paren-newline": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-curly-brace-presence": "off",
+    "react/prop-types": "off",
+    "jest/no-identical-title": "off",
+    "react/no-unused-prop-types": "off",
+    "react/require-default-props": "off",
+    "react/prefer-stateless-function": "off",
+    "jsx-a11y/label-has-associated-control": [ 2, {
+      "labelComponents": ["label"],
+      "labelAttributes": ["htmlFor"],
+      "controlComponents": ["input"]
+    }],
+    "jsx-a11y/label-has-for": [ 2, {
+      "required": {
+        "some": [ "nesting", "id" ]
+      }
+    }],
+    "react/sort-comp": "off",
+    "import/first": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "react/no-deprecated": "off",
+    "object-curly-newline": "off",
+    "prefer-const": "off",
+    "react/no-this-in-sfc": "off",
+    "react/destructuring-assignment":"off",
+    "operator-linebreak": ["error", "after"],
+    "react/jsx-one-expression-per-line": "off",
+    "array-bracket-spacing": ["error", "always", { "arraysInArrays": false, "objectsInArrays": false }]
+  }
+}

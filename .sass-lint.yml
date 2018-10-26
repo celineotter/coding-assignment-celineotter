@@ -1,0 +1,4 @@
+files:
+  include: 'src/**/*.scss'
+rules:
+  clean-import-paths: 0
