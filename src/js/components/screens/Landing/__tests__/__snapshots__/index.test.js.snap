@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`when user is of type "pilot" in the redux store renders traffic light with set color props  1`] = `
+exports[`Landing screen when user is of type "pilot" in the redux store renders traffic light with set color props  1`] = `
 <div
   className="src-js-components-screens-Landing-___styles__wrapper___1ia3v"
 >
@@ -35,7 +35,7 @@ exports[`when user is of type "pilot" in the redux store renders traffic light w
 </div>
 `;
 
-exports[`when user is of type "production" in the redux store renders traffic light without set color props  1`] = `
+exports[`Landing screen when user is of type "production" in the redux store renders traffic light without set color props  1`] = `
 <div
   className="src-js-components-screens-Landing-___styles__wrapper___1ia3v"
 >
@@ -64,7 +64,7 @@ exports[`when user is of type "production" in the redux store renders traffic li
 </div>
 `;
 
-exports[`when user type is not set in the redux store renders landing text with no traffic light,  1`] = `
+exports[`Landing screen when user type is not set in the redux store renders landing text with no traffic light,  1`] = `
 <div
   className="src-js-components-screens-Landing-___styles__wrapper___1ia3v"
 >
