@@ -3,7 +3,7 @@ import { getShallowProviderAndWrapper, getInitializedConnectedComponent } from '
 
 import Landing from '@screens/Landing';
 
-describe('when user type is not available', () => {
+describe('when user type is not set in the redux store', () => {
   it('renders landing text with no traffic light, ', () => {
     const landing = getShallowProviderAndWrapper(<Landing />).wrapper;
 
@@ -15,7 +15,7 @@ describe('when user type is not available', () => {
   });
 });
 
-describe('when user is of type "production"', () => {
+describe('when user is of type "production" in the redux store', () => {
   let wrapper;
 
   beforeEach(() => {
@@ -29,7 +29,7 @@ describe('when user is of type "production"', () => {
   });
 });
 
-describe('when user is of type "pilot"', () => {
+describe('when user is of type "pilot" in the redux store', () => {
   let wrapper;
 
   beforeEach(() => {

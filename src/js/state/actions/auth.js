@@ -13,8 +13,8 @@ export const setUserType: setUserTypeAction = (userType) => {
   };
 };
 
-export const resetState = () => {
-  localStorage.removeItem('userType');
+export const resetAuthState = () => {
+  sessionStorage.removeItem('userType');
 
   return {
     type: actionTypes.CLEAR_USER_TYPE,

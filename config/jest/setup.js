@@ -26,4 +26,8 @@ global.navigator = {
   userAgent: 'node.js',
 };
 copyProps(window, global);
-// End jsdom and related setup
+
+afterEach(() => {
+  jest.restoreAllMocks();
+  global.window.sessionStorage.clear();
+});
