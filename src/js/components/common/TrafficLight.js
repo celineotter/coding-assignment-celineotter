@@ -1,31 +1,53 @@
+// @flow
+
 import React, { Component } from 'react';
 
 import './traffic-light.css';
 
-const DEFAULT_COLORS = [ 'red', 'yellow', 'green' ];
-let cancelTimeOut;
+type colorsType = Array<string>;
 
-class TrafficLight extends Component {
-  constructor(props) {
+const DEFAULT_COLORS: colorsType = [ 'red', 'yellow', 'green' ];
+
+let cancelTimeOutId;
+
+type StateProps = {
+  colors: ?colorsType,
+};
+
+type TrafficLightState = {
+  colorIndex: ?number,
+};
+
+class TrafficLight extends Component<StateProps, TrafficLightState> {
+  constructor(props: StateProps) {
     super(props);
+
     this.state = {
-      colors: this.props.colors ? this.props.colors : DEFAULT_COLORS,
       colorIndex: 0,
     };
   }
 
   componentWillUnmount() {
-    cancelTimeOut();
+    this.clearTimers();
   }
 
   componentDidMount() {
     this.handleLightChange();
   }
 
+  clearTimers() {
+    clearTimeout(cancelTimeOutId);
+  }
+
+  getColors() {
+    return this.props.colors || DEFAULT_COLORS;
+  }
+
   handleLightChange = () => {
     const tempIndex = this.state.colorIndex + 1;
-    const newIndex = tempIndex > this.state.colors.length - 1 ? 0 : tempIndex;
-    cancelTimeOut = setTimeout(() => {
+    const newIndex = tempIndex > this.getColors().length - 1 ? 0 : tempIndex;
+
+    cancelTimeOutId = setTimeout(() => {
       this.setState({ colorIndex: newIndex }, this.handleLightChange);
     }, 1000);
   }
@@ -35,19 +57,17 @@ class TrafficLight extends Component {
       <div>
         <div styleName="traffic-light-container">
           <div styleName="square">
-            {this.state.colors.map((color, index) => {
+            {this.getColors().map((color, index) => {
               const activeLight = index === this.state.colorIndex;
-              const colorStyle = activeLight ? color : '';
-              const style = `circle circle${index} ${colorStyle}`;
+              const style = [ 'circle', `circle${index}`, activeLight ? color : '' ].join(' ');
 
               return (
-                <div styleName={style} key={`light${index}`} />
+                <div testId="light" styleName={style} key={`light${index}`} />
               );
             })}
           </div>
         </div>
       </div>
-
     );
   }
 }

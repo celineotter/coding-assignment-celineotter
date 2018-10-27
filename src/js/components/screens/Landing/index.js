@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import TrafficLight from '@common/TrafficLight';
-import { setUserType } from 'js/state/actions/auth';
+import { setUserType, type setUserTypeAction } from 'js/state/actions/auth';
 
 import './styles.css';
 import config from '../../../config.json';
@@ -14,12 +14,12 @@ type StateProps = {
 };
 
 type DispatchProps = {
-  dispatchUserType: setUserType,
+  dispatchUserType: setUserTypeAction,
 };
 
 type ComposedComponentType = $Supertype<DispatchProps & StateProps>;
 
-class Landing extends Component<ComposedComponentType> {
+class Landing extends Component<ComposedComponentType, {}> {
   componentDidMount() {
     const { userType } = this.props;
     if (!userType) {
@@ -28,8 +28,9 @@ class Landing extends Component<ComposedComponentType> {
   }
 
   handleSetUserType() {
-    const coin = Math.floor(Math.random() * 2);
-    this.props.dispatchUserType(coin === 0 ? 'production' : 'pilot');
+    const coinFlip = Math.floor(Math.random() * 2);
+    const userType = coinFlip === 0 ? 'production' : 'pilot';
+    this.props.dispatchUserType(userType);
   }
 
   renderTrafficLights() {

@@ -6,10 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 import Routes from 'js/Routes';
 
 class App extends Component<{}> {
-  // renderHeader() {}
-
-  // renderFooter() {}
-
   render() {
     return (
       <BrowserRouter>

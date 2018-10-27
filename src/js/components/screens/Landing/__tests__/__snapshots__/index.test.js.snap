@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders landing text 1`] = `
+exports[`when user is of type "pilot" renders traffic light with set color props  1`] = `
 <div
   className="src-js-components-screens-Landing-___styles__wrapper___1ia3v"
 >
@@ -19,6 +19,69 @@ exports[`renders landing text 1`] = `
   >
     Traffic Light Exercise!
   </p>
-  <TrafficLight />
+  <div
+    className="src-js-components-screens-Landing-___styles__traffic-light-row___162r3"
+  >
+    <TrafficLight
+      colors={
+        Array [
+          "blue",
+          "orange",
+          "purple",
+        ]
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`when user is of type "production" renders traffic light without set color props  1`] = `
+<div
+  className="src-js-components-screens-Landing-___styles__wrapper___1ia3v"
+>
+  <header
+    className="src-js-components-screens-Landing-___styles__header___2IFnP"
+  >
+    <h1
+      className="src-js-components-screens-Landing-___styles__title___1GTe4"
+    >
+      Ancestry Coding Challenge
+    </h1>
+  </header>
+  <p
+    className="src-js-components-screens-Landing-___styles__intro___2mDAK"
+    testid="intro"
+  >
+    Traffic Light Exercise!
+  </p>
+  <div
+    className="src-js-components-screens-Landing-___styles__traffic-light-row___162r3"
+  >
+    <TrafficLight
+      colors={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`when user type is not available renders landing text with no traffic light,  1`] = `
+<div
+  className="src-js-components-screens-Landing-___styles__wrapper___1ia3v"
+>
+  <header
+    className="src-js-components-screens-Landing-___styles__header___2IFnP"
+  >
+    <h1
+      className="src-js-components-screens-Landing-___styles__title___1GTe4"
+    >
+      Ancestry Coding Challenge
+    </h1>
+  </header>
+  <p
+    className="src-js-components-screens-Landing-___styles__intro___2mDAK"
+    testid="intro"
+  >
+    Traffic Light Exercise!
+  </p>
 </div>
 `;
