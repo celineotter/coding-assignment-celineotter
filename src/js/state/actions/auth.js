@@ -13,7 +13,7 @@ export const setUserType: setUserTypeAction = (userType) => {
   };
 };
 
-export const clearUserType = () => {
+export const resetState = () => {
   localStorage.removeItem('userType');
 
   return {
