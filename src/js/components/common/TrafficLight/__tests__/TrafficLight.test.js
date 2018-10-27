@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import TrafficLight from '@common/TrafficLight';
+import TrafficLight from '@common/TrafficLight/index';
 
 describe('TrafficLight', () => {
   let wrapper;

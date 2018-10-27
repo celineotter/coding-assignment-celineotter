@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrafficLight renders the component 1`] = `
+<div>
+  <div
+    className="src-js-components-common-TrafficLight-___traffic-light__traffic-light-container___16MOq"
+  >
+    <div
+      className="src-js-components-common-TrafficLight-___traffic-light__square___3gj-g"
+    >
+      <div
+        className="src-js-components-common-TrafficLight-___traffic-light__circle___Njr6J src-js-components-common-TrafficLight-___traffic-light__circle0___3sqJi src-js-components-common-TrafficLight-___traffic-light__red___1ezMl"
+        key="light0"
+        testId="light"
+      />
+      <div
+        className="src-js-components-common-TrafficLight-___traffic-light__circle___Njr6J src-js-components-common-TrafficLight-___traffic-light__circle1___3zzsx"
+        key="light1"
+        testId="light"
+      />
+      <div
+        className="src-js-components-common-TrafficLight-___traffic-light__circle___Njr6J src-js-components-common-TrafficLight-___traffic-light__circle2___1Kgfu"
+        key="light2"
+        testId="light"
+      />
+    </div>
+  </div>
+</div>
+`;

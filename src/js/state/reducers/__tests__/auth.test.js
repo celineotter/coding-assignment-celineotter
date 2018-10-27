@@ -1,5 +1,5 @@
 import authReducer from 'js/state/reducers/auth';
-import { setUserType, resetState } from 'js/state/actions/auth';
+import { setUserType, resetAuthState } from 'js/state/actions/auth';
 
 describe('auth reducer', () => {
   let initialState;
@@ -24,7 +24,7 @@ describe('auth reducer', () => {
 
   it('returns the default when action CLEAR_USER_TYPE is dispatched', () => {
     initialState = { userType: 'my user type' };
-    state = authReducer(initialState, resetState());
+    state = authReducer(initialState, resetAuthState());
     expect(state.userType).toEqual(null);
   });
 
