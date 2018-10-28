@@ -39,7 +39,15 @@ class Landing extends Component<ComposedComponentType, {}> {
 
     return (
       <div styleName="traffic-light-row">
-        <TrafficLight colors={config.users[userType].trafficColors} />
+        <div styleName="alpha-beta-wrapper">
+          <TrafficLight colors={config.users.pilot.trafficColors} />
+        </div>
+        <div styleName="alpha-beta-wrapper featured">
+          <TrafficLight colors={config.users[userType].trafficColors} />
+        </div>
+        <div styleName="alpha-beta-wrapper">
+          <TrafficLight colors={config.users.production.trafficColors} />
+        </div>
       </div>
     );
   }

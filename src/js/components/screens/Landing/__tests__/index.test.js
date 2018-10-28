@@ -66,7 +66,7 @@ describe('Landing screen', () => {
     });
 
     it('renders traffic light without set color props ', () => {
-      const colorProps = wrapper.find('TrafficLight').props().colors;
+      const colorProps = wrapper.find('TrafficLight').at(1).props().colors;
       expect(colorProps).toBe(null);
       expect(wrapper).toMatchSnapshot();
     });
@@ -80,7 +80,7 @@ describe('Landing screen', () => {
     });
 
     it('renders traffic light with set color props ', () => {
-      const colorProps = wrapper.find('TrafficLight').props().colors;
+      const colorProps = wrapper.find('TrafficLight').at(1).props().colors;
       expect(colorProps).toEqual([ 'blue', 'orange', 'purple' ]);
       expect(wrapper).toMatchSnapshot();
     });

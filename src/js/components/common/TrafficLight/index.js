@@ -54,19 +54,15 @@ class TrafficLight extends Component<StateProps, TrafficLightState> {
 
   render() {
     return (
-      <div>
-        <div styleName="traffic-light-container">
-          <div styleName="square">
-            {this.getColors().map((color, index) => {
-              const activeLight = index === this.state.colorIndex;
-              const style = [ 'circle', `circle${index}`, activeLight ? color : '' ].join(' ');
+      <div styleName="square">
+        {this.getColors().map((color, index) => {
+          const activeLight = index === this.state.colorIndex;
+          const style = [ 'circle', `circle${index}`, activeLight ? color : '' ].join(' ');
 
-              return (
-                <div testId="light" styleName={style} key={`light${index}`} />
-              );
-            })}
-          </div>
-        </div>
+          return (
+            <div testId="light" styleName={style} key={`light${index}`} />
+          );
+        })}
       </div>
     );
   }

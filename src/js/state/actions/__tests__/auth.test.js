@@ -1,10 +1,6 @@
 import { setUserType, resetAuthState } from '../auth';
 
 describe('setUserType action', () => {
-  beforeEach(() => {
-
-  });
-
   it('sets an session token', () => {
     expect(window.sessionStorage.getItem('userType')).toBe(null);
 

@@ -22,15 +22,39 @@ exports[`Landing screen when user is of type "pilot" renders traffic light with 
   <div
     className="src-js-components-screens-Landing-___styles__traffic-light-row___162r3"
   >
-    <TrafficLight
-      colors={
-        Array [
-          "blue",
-          "orange",
-          "purple",
-        ]
-      }
-    />
+    <div
+      className="src-js-components-screens-Landing-___styles__alpha-beta-wrapper___28KUx"
+    >
+      <TrafficLight
+        colors={
+          Array [
+            "blue",
+            "orange",
+            "purple",
+          ]
+        }
+      />
+    </div>
+    <div
+      className="src-js-components-screens-Landing-___styles__alpha-beta-wrapper___28KUx src-js-components-screens-Landing-___styles__featured___QsT0-"
+    >
+      <TrafficLight
+        colors={
+          Array [
+            "blue",
+            "orange",
+            "purple",
+          ]
+        }
+      />
+    </div>
+    <div
+      className="src-js-components-screens-Landing-___styles__alpha-beta-wrapper___28KUx"
+    >
+      <TrafficLight
+        colors={null}
+      />
+    </div>
   </div>
 </div>
 `;
@@ -57,9 +81,33 @@ exports[`Landing screen when user is of type "production" renders traffic light 
   <div
     className="src-js-components-screens-Landing-___styles__traffic-light-row___162r3"
   >
-    <TrafficLight
-      colors={null}
-    />
+    <div
+      className="src-js-components-screens-Landing-___styles__alpha-beta-wrapper___28KUx"
+    >
+      <TrafficLight
+        colors={
+          Array [
+            "blue",
+            "orange",
+            "purple",
+          ]
+        }
+      />
+    </div>
+    <div
+      className="src-js-components-screens-Landing-___styles__alpha-beta-wrapper___28KUx src-js-components-screens-Landing-___styles__featured___QsT0-"
+    >
+      <TrafficLight
+        colors={null}
+      />
+    </div>
+    <div
+      className="src-js-components-screens-Landing-___styles__alpha-beta-wrapper___28KUx"
+    >
+      <TrafficLight
+        colors={null}
+      />
+    </div>
   </div>
 </div>
 `;

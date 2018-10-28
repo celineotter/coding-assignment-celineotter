@@ -27,9 +27,14 @@
 }
 
 .traffic-light-row {
-  display: 'inline-block';
-}
+  display: flex;
+  justify-content: space-around;
 
-.component-wrapper {
-  display: block;
+  .alpha-beta-wrapper {
+    padding: 20px;
+  }
+
+  .featured {
+    background-color: yellow;
+  }
 }

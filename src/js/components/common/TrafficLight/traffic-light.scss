@@ -1,6 +1,11 @@
-.traffic-light-container {
-  display: flex;
-  justify-content: center;
+.square {
+  width: 105px;
+  height: 325px;
+  background-color: white;
+  position: relative;
+  border-style: solid;
+  border-color: black;
+  background-color: grey;
 }
 
 .circle {
@@ -45,15 +50,4 @@
 
 .purple {
   background-color: purple;
-}
-
-.square {
-  width: 105px;
-  height: 325px;
-  background-color: white;
-  position: absolute;
-  border-style: solid;
-  border-color: black;
-  background-color: grey;
-  z-index: 1;
 }
